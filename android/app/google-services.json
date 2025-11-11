@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "195471786367",
+    "project_id": "smartpdf-beb9d",
+    "storage_bucket": "smartpdf-beb9d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:195471786367:android:9e9ea7e0d9555e60379a4a",
+        "android_client_info": {
+          "package_name": "com.smartpdf.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAiR3xB5hbkAksuIMbbUKG9xZ2ZXHVaAKI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
