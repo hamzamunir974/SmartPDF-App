@@ -1,354 +1,706 @@
-# 📱 SmartPDF - Flutter Document Management App# 📄 SmartPDF
+# 📄 SmartPDF#  SmartPDF
 
 
 
-<div align="center">[![Flutter](https://img.shields.io/badge/Flutter-3.1.0-blue?logo=flutter)](https://flutter.dev/)
+A **production-ready Flutter application** for seamless PDF and Word document conversion with cloud-based storage, Firebase authentication, and multi-platform support.
+
+
+
+[![Flutter](https://img.shields.io/badge/Flutter-3.1.0-blue?logo=flutter)](https://flutter.dev/)<div align="center">[![Flutter](https://img.shields.io/badge/Flutter-3.1.0-blue?logo=flutter)](https://flutter.dev/)
 
 [![Dart](https://img.shields.io/badge/Dart-3.1.0-blue?logo=dart)](https://dart.dev/)
 
+[![Firebase](https://img.shields.io/badge/Firebase-v9-FFA500?logo=firebase)](https://firebase.google.com/)[![Dart](https://img.shields.io/badge/Dart-3.1.0-blue?logo=dart)](https://dart.dev/)
+
+[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
+
 ![SmartPDF Logo](https://img.shields.io/badge/SmartPDF-v1.0.0-red?style=for-the-badge&logo=pdf)[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
+
+**Status:** ✅ **Fully Functional & Ready for Deployment**
 
 [![Flutter Version](https://img.shields.io/badge/Flutter-3.1.0+-02569B?style=for-the-badge&logo=flutter)](https://flutter.dev/)[![Platform](https://img.shields.io/badge/Platform-iOS%20%7C%20Android%20%7C%20Web-blue)](https://flutter.dev/)
 
-[![Dart Version](https://img.shields.io/badge/Dart-3.1.0+-0175C2?style=for-the-badge&logo=dart)](https://dart.dev/)
-
-[![Firebase](https://img.shields.io/badge/Firebase-v9-FFA500?style=for-the-badge&logo=firebase)](https://firebase.google.com/)A **production-ready Flutter application** for seamless PDF and Word document conversion with cloud-based storage, Firebase authentication, and multi-platform support.
-
-[![Platform](https://img.shields.io/badge/Platform-iOS%20|%20Android%20|%20Web-blue?style=for-the-badge&logo=apple)](https://flutter.dev/)
-
-[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)**Status:** ✅ **Fully Functional & Ready for Deployment**
-
-[![Status](https://img.shields.io/badge/Status-Production%20Ready-success?style=for-the-badge)](https://github.com)
-
----
-
-**A Production-Ready Flutter Application for PDF Management, Document Conversion, and Cloud Storage**
-
 ## 🎯 Features
 
-[Features](#-features) • [Tech Stack](#-tech-stack) • [Installation](#-installation) • [Architecture](#-architecture) • [Contributing](#-contributing)
+[![Dart Version](https://img.shields.io/badge/Dart-3.1.0+-0175C2?style=for-the-badge&logo=dart)](https://dart.dev/)
 
 ### Authentication
 
-</div>- ✅ **Email/Password** - Create account, login, password reset with email verification
+- ✅ **Email/Password** - Create account, login, password reset with email verification[![Firebase](https://img.shields.io/badge/Firebase-v9-FFA500?style=for-the-badge&logo=firebase)](https://firebase.google.com/)A **production-ready Flutter application** for seamless PDF and Word document conversion with cloud-based storage, Firebase authentication, and multi-platform support.
 
 - ✅ **Google Sign-In** - One-tap authentication (iOS, Android)
 
----- ✅ **Guest Mode** - Access without creating an account
+- ✅ **Guest Mode** - Access without creating an account[![Platform](https://img.shields.io/badge/Platform-iOS%20|%20Android%20|%20Web-blue?style=for-the-badge&logo=apple)](https://flutter.dev/)
 
 - ✅ **Secure Password** - Validation (8+ chars, uppercase, lowercase, number, special char)
 
-## 📋 Table of Contents- ✅ **Remember Me** - Optional credential persistence
+- ✅ **Remember Me** - Optional credential persistence[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)**Status:** ✅ **Fully Functional & Ready for Deployment**
 
 
 
-1. [Overview](#overview)### File Management
+### File Management[![Status](https://img.shields.io/badge/Status-Production%20Ready-success?style=for-the-badge)](https://github.com)
 
-2. [Features](#-features)- ✅ **Upload PDFs** - Select and upload with progress tracking
+- ✅ **Upload PDFs** - Select and upload with progress tracking
 
-3. [Tech Stack](#-tech-stack)- ✅ **Download PDFs** - Download to device storage
+- ✅ **Download PDFs** - Download to device storage---
 
-4. [Project Structure](#-project-structure)- ✅ **Share PDFs** - Generate shareable download links
+- ✅ **Share PDFs** - Generate shareable download links
 
-5. [Installation & Setup](#-installation--setup)- ✅ **Delete PDFs** - Manage cloud storage files
+- ✅ **Delete PDFs** - Manage cloud storage files**A Production-Ready Flutter Application for PDF Management, Document Conversion, and Cloud Storage**
 
-6. [Running the App](#-running-the-app)- ✅ **View Metadata** - File size, creation date, page count
+- ✅ **View Metadata** - File size, creation date, page count
 
-7. [Firebase Configuration](#-firebase-configuration)
+## 🎯 Features
 
-8. [Architecture & Design](#-architecture--design)### PDF Conversion (Mobile Only)
+### PDF Conversion (Mobile Only)
 
-9. [API Documentation](#-api-documentation)- ✅ **PDF to Word** - Extract text and save as RTF/DOCX
+- ✅ **PDF to Word** - Extract text and save as RTF/DOCX[Features](#-features) • [Tech Stack](#-tech-stack) • [Installation](#-installation) • [Architecture](#-architecture) • [Contributing](#-contributing)
 
-10. [Testing](#-testing)- ✅ **Word to PDF** - Convert documents with formatting
+- ✅ **Word to PDF** - Convert documents with formatting
 
-11. [Building for Production](#-building-for-production)- ✅ **Progress Tracking** - Real-time upload/download UI
+- ✅ **Progress Tracking** - Real-time upload/download UI### Authentication
 
-12. [Troubleshooting](#-troubleshooting)- ✅ **Conversion History** - Track all conversions in Firestore
+- ✅ **Conversion History** - Track all conversions in Firestore
 
-13. [Future Enhancements](#-future-enhancements)
+</div>- ✅ **Email/Password** - Create account, login, password reset with email verification
 
-14. [References](#-references)### User Profile
+### User Profile
 
-15. [License](#-license)- ✅ **Update Profile** - Edit name and photo
+- ✅ **Update Profile** - Edit name and photo- ✅ **Google Sign-In** - One-tap authentication (iOS, Android)
 
 - ✅ **Change Password** - Secure password change
 
----- ✅ **Delete Account** - Remove account and all data
+- ✅ **Delete Account** - Remove account and all data---- ✅ **Guest Mode** - Access without creating an account
 
 - ✅ **Theme Toggle** - Dark/Light mode support
 
-## Overview
+- ✅ **Secure Password** - Validation (8+ chars, uppercase, lowercase, number, special char)
 
 ### Cross-Platform
 
-**SmartPDF** is a full-featured Flutter application that enables users to:- ✅ **iOS** - Full feature support
+- ✅ **iOS** - Full feature support## 📋 Table of Contents- ✅ **Remember Me** - Optional credential persistence
 
 - ✅ **Android** - Full feature support
 
-- 🔐 **Authenticate** via email/password, Google Sign-In, or as a guest (no account required)- ✅ **Web** - Guest mode, auth, UI (PDF conversion not supported on web)
+- ✅ **Web** - Guest mode, auth, UI (PDF conversion not supported on web)
 
-- 📤 **Upload & Store** PDF files securely in Firebase Cloud Storage with progress tracking
 
-- 🔄 **Convert** between PDF and Word document formats seamlessly---
 
-- 📁 **Manage** PDFs with search, share, and download capabilities
+## 🛠️ Tech Stack1. [Overview](#overview)### File Management
 
-- 🌐 **Access** across **iOS, Android, and Web** platforms## 🛠️ Tech Stack
 
-- 🎨 **Enjoy** dark/light theme support with Material Design 3
 
-| Layer | Technology | Version |
+| Layer | Technology | Version |2. [Features](#-features)- ✅ **Upload PDFs** - Select and upload with progress tracking
 
-**Status:** ✅ **Fully Functional, Tested, and Ready for Deployment**|-------|-----------|---------|
+|-------|-----------|---------|
 
-| **UI Framework** | Flutter | 3.1.0+ |
+| **UI Framework** | Flutter | 3.1.0+ |3. [Tech Stack](#-tech-stack)- ✅ **Download PDFs** - Download to device storage
 
----| **State Management** | GetX | 4.6.6 |
+| **State Management** | GetX | 4.6.6 |
 
-| **Authentication** | Firebase Auth + Google Sign-In | 6.1.1 / 6.1.5 |
+| **Authentication** | Firebase Auth + Google Sign-In | 6.1.1 / 6.1.5 |4. [Project Structure](#-project-structure)- ✅ **Share PDFs** - Generate shareable download links
 
-## 🎯 Features| **Cloud Storage** | Firebase Storage + Firestore | 13.0.3 / 6.0.3 |
+| **Cloud Storage** | Firebase Storage + Firestore | 13.0.3 / 6.0.3 |
 
-| **PDF Processing** | Syncfusion Flutter PDF | 31.2.4 |
+| **PDF Processing** | Syncfusion Flutter PDF | 31.2.4 |5. [Installation & Setup](#-installation--setup)- ✅ **Delete PDFs** - Manage cloud storage files
 
-### Authentication & User Management| **File Operations** | file_picker, path_provider | 10.3.3 / 2.1.1 |
+| **File Operations** | file_picker, path_provider | 10.3.3 / 2.1.1 |
 
-- ✅ **Email/Password Registration** with strong password validation (8+ chars, uppercase, lowercase, number, special char)| **Sharing** | share_plus | 7.2.1 |
+| **Sharing** | share_plus | 7.2.1 |6. [Running the App](#-running-the-app)- ✅ **View Metadata** - File size, creation date, page count
 
-- ✅ **Email/Password Login** with email verification required| **UI Design** | Material Design 3 | - |
+| **UI Design** | Material Design 3 | - |
 
-- ✅ **Google Sign-In (OAuth 2.0)** for one-tap authentication
+7. [Firebase Configuration](#-firebase-configuration)
 
-- ✅ **Guest Mode** - Access without creating an account (local session)---
+## 📦 Project Structure
 
-- ✅ **Password Reset** - Secure email-based password recovery
-
-- ✅ **Profile Management** - Edit name, photo, change password, delete account## 📦 Project Structure
-
-- ✅ **Remember Me** - Optional credential persistence via SharedPreferences
-
-- ✅ **Session Management** - Persistent login with last login tracking```
-
-lib/
-
-### File Management & Cloud Storage├── main.dart                    # App entry point
-
-- ✅ **Upload PDFs** - Select files with file picker, show progress (0-100%)├── app/
-
-- ✅ **Download PDFs** - Download from Firebase Storage to device│   ├── routes/app_pages.dart   # Navigation routes
-
-- ✅ **Share PDFs** - Generate shareable download links via share_plus│   ├── themes/app_theme.dart   # Material Design 3
-
-- ✅ **Delete PDFs** - Permanently remove files from cloud storage│   ├── services/               # Business logic
-
-- ✅ **View Metadata** - Display file size (KB), creation date, page count│   │   ├── auth_service.dart
-
-- ✅ **List Files** - Show all user's uploaded PDFs│   │   ├── pdf_service.dart
-
-- ✅ **File Search** - Find conversions by name or date│   │   ├── storage_service.dart
-
-│   │   └── document_conversion_service.dart
-
-### PDF Conversion (Mobile Only)│   ├── modules/                # Feature modules
-
-- ✅ **PDF to Word** - Extract text from PDF, save as RTF document with formatting│   │   ├── auth/               # Login, Register, Password Reset
-
-- ✅ **Word to PDF** - Convert text documents to PDF with proper formatting│   │   ├── home/               # Dashboard, History, Profile
-
-- ✅ **Progress Tracking** - Real-time upload/download progress UI with percentage│   │   ├── conversion/         # PDF Conversion
-
-- ✅ **Conversion History** - Track all conversions in Firestore with timestamps│   │   └── splash/             # Splash Screen
-
-- ✅ **Batch Operations** - Convert and upload multiple files│   └── data/                   # Models & Repositories
-
-- ✅ **Error Handling** - User-friendly error messages and validation└── assets/                     # Images & Icons
-
-
-
-### User Interface & Experienceandroid/
-
-- ✅ **Material Design 3** - Modern, responsive UI following latest design guidelines├── app/google-services.json    # Firebase config
-
-- ✅ **Dark/Light Themes** - System theme detection (iOS/Android) + manual toggle└── build.gradle.kts
-
-- ✅ **Bottom Navigation** - Easy access to Home, History, and Profile tabs
-
-- ✅ **Loading Animations** - Smooth animations during file operationsios/
-
-- ✅ **Error Messages** - Clear, actionable error messages from Firebase└── Runner/GoogleService-Info.plist  # Firebase config
-
-- ✅ **Responsive Layout** - Works on phones, tablets, and web browsers```
-
-
-
-### Cross-Platform Support---
-
-- ✅ **iOS** - Full feature support with native integration
-
-- ✅ **Android** - Full feature support with native permissions## 🚀 Quick Start
-
-- ✅ **Web** - Guest mode, authentication, UI (PDF conversion via mobile only)
-
-- ✅ **macOS, Windows, Linux** - Base support (UI may require adjustments)### Prerequisites
-
-
-
----```bash
-
-# Check Flutter installation
-
-## 🛠️ Tech Stackflutter --version
-
-
-
-### Core Framework# Verify environment
-
-| Component | Technology | Version | Purpose |flutter doctor
-
-|-----------|-----------|---------|---------|```
-
-| **UI Framework** | Flutter | 3.1.0+ | Cross-platform UI development |
-
-| **Programming Language** | Dart | >=3.1.0 <4.0.0 | Application logic |**Required:**
-
-| **State Management** | GetX | 4.6.6 | Reactive state & routing |- Flutter SDK 3.1.0 or higher
-
-- Xcode 14+ (for iOS)
-
-### Backend & Cloud Services- Android SDK 21+ (for Android)
-
-| Component | Technology | Version | Purpose |- Firebase Project (https://console.firebase.google.com)
-
-|-----------|-----------|---------|---------|
-
-| **Authentication** | Firebase Auth | 6.1.1 | Email/password, user management |### Installation
-
-| **Cloud Storage** | Firebase Storage | 13.0.3 | File upload/download |
-
-| **Database** | Cloud Firestore | 6.0.3 | User profiles, conversion history |#### 1. Clone Repository
-
-| **OAuth** | Google Sign-In | 6.1.5 | Google authentication |```bash
-
-git clone https://github.com/yourusername/smartpdf.git
-
-### Libraries & Packagescd smartpdf
-
-| Category | Package | Version | Purpose |```
-
-|----------|---------|---------|---------|
-
-| **PDF Processing** | syncfusion_flutter_pdf | 31.2.4 | PDF text extraction, manipulation |#### 2. Install Dependencies
-
-| **File Handling** | file_picker | 10.3.3 | File selection (Android/iOS) |```bash
-
-| **File Selection** | file_selector | 1.0.3 | File selection (Web/Desktop) |flutter pub get
-
-| **System Paths** | path_provider | 2.1.1 | Temporary/document directories |```
-
-| **Permissions** | permission_handler | 12.0.1 | Runtime permissions (Android/iOS) |
-
-| **File Sharing** | share_plus | 7.2.1 | System share dialog |#### 3. Configure Firebase
-
-| **Typography** | google_fonts | 6.1.0 | Custom fonts |
-
-| **Icons** | flutter_svg | 2.0.9 | SVG vector graphics |**For Android:**
-
-| **Loading** | loading_animation_widget | 1.2.0+4 | Loading animations |- Ensure `android/app/google-services.json` exists ✅ (already included)
-
-| **Localization** | intl | 0.20.2 | Internationalization |
-
-| **URL Launcher** | url_launcher | 6.2.1 | Open URLs |**For iOS:**
-
-| **Local Storage** | shared_preferences | 2.2.2 | Persistent key-value storage |- Ensure `ios/Runner/GoogleService-Info.plist` exists ✅ (already included)
-
-- Add to Xcode if needed:
-
----  ```bash
-
-  open ios/Runner.xcworkspace
-
-## 📁 Project Structure  # Right-click Runner → Add Files → GoogleService-Info.plist
-
-  ```
+8. [Architecture & Design](#-architecture--design)### PDF Conversion (Mobile Only)
 
 ```
 
-smartpdf/**For Web:**
+lib/9. [API Documentation](#-api-documentation)- ✅ **PDF to Word** - Extract text and save as RTF/DOCX
 
-│- Firebase config is in `lib/main.dart` (hardcoded for development)
+├── main.dart                    # App entry point
+
+├── app/10. [Testing](#-testing)- ✅ **Word to PDF** - Convert documents with formatting
+
+│   ├── routes/app_pages.dart   # Navigation routes
+
+│   ├── themes/app_theme.dart   # Material Design 311. [Building for Production](#-building-for-production)- ✅ **Progress Tracking** - Real-time upload/download UI
+
+│   ├── services/               # Business logic
+
+│   │   ├── auth_service.dart12. [Troubleshooting](#-troubleshooting)- ✅ **Conversion History** - Track all conversions in Firestore
+
+│   │   ├── pdf_service.dart
+
+│   │   ├── storage_service.dart13. [Future Enhancements](#-future-enhancements)
+
+│   │   └── document_conversion_service.dart
+
+│   ├── modules/                # Feature modules14. [References](#-references)### User Profile
+
+│   │   ├── auth/               # Login, Register, Password Reset
+
+│   │   ├── home/               # Dashboard, History, Profile15. [License](#-license)- ✅ **Update Profile** - Edit name and photo
+
+│   │   ├── conversion/         # PDF Conversion
+
+│   │   └── splash/             # Splash Screen- ✅ **Change Password** - Secure password change
+
+│   └── data/                   # Models & Repositories
+
+---- ✅ **Delete Account** - Remove account and all data
+
+android/
+
+├── app/google-services.json    # Firebase config- ✅ **Theme Toggle** - Dark/Light mode support
+
+
+
+ios/## Overview
+
+└── Runner/GoogleService-Info.plist  # Firebase config
+
+```### Cross-Platform
+
+
+
+## 🚀 Quick Start**SmartPDF** is a full-featured Flutter application that enables users to:- ✅ **iOS** - Full feature support
+
+
+
+### Prerequisites- ✅ **Android** - Full feature support
+
+```bash
+
+# Check Flutter installation- 🔐 **Authenticate** via email/password, Google Sign-In, or as a guest (no account required)- ✅ **Web** - Guest mode, auth, UI (PDF conversion not supported on web)
+
+flutter --version
+
+- 📤 **Upload & Store** PDF files securely in Firebase Cloud Storage with progress tracking
+
+# Verify environment
+
+flutter doctor- 🔄 **Convert** between PDF and Word document formats seamlessly---
+
+```
+
+- 📁 **Manage** PDFs with search, share, and download capabilities
+
+**Required:**
+
+- Flutter SDK 3.1.0 or higher- 🌐 **Access** across **iOS, Android, and Web** platforms## 🛠️ Tech Stack
+
+- Xcode 14+ (for iOS)
+
+- Android SDK 21+ (for Android)- 🎨 **Enjoy** dark/light theme support with Material Design 3
+
+- Firebase Project (https://console.firebase.google.com)
+
+| Layer | Technology | Version |
+
+### Installation
+
+**Status:** ✅ **Fully Functional, Tested, and Ready for Deployment**|-------|-----------|---------|
+
+#### 1. Clone Repository
+
+```bash| **UI Framework** | Flutter | 3.1.0+ |
+
+git clone https://github.com/yourusername/smartpdf.git
+
+cd smartpdf---| **State Management** | GetX | 4.6.6 |
+
+```
+
+| **Authentication** | Firebase Auth + Google Sign-In | 6.1.1 / 6.1.5 |
+
+#### 2. Install Dependencies
+
+```bash## 🎯 Features| **Cloud Storage** | Firebase Storage + Firestore | 13.0.3 / 6.0.3 |
+
+flutter pub get
+
+```| **PDF Processing** | Syncfusion Flutter PDF | 31.2.4 |
+
+
+
+#### 3. Configure Firebase### Authentication & User Management| **File Operations** | file_picker, path_provider | 10.3.3 / 2.1.1 |
+
+
+
+**For Android:**- ✅ **Email/Password Registration** with strong password validation (8+ chars, uppercase, lowercase, number, special char)| **Sharing** | share_plus | 7.2.1 |
+
+- Ensure `android/app/google-services.json` exists ✅ (already included)
+
+- ✅ **Email/Password Login** with email verification required| **UI Design** | Material Design 3 | - |
+
+**For iOS:**
+
+- Ensure `ios/Runner/GoogleService-Info.plist` exists ✅ (already included)- ✅ **Google Sign-In (OAuth 2.0)** for one-tap authentication
+
+- Add to Xcode if needed:
+
+  ```bash- ✅ **Guest Mode** - Access without creating an account (local session)---
+
+  open ios/Runner.xcworkspace
+
+  # Right-click Runner → Add Files → GoogleService-Info.plist- ✅ **Password Reset** - Secure email-based password recovery
+
+  ```
+
+- ✅ **Profile Management** - Edit name, photo, change password, delete account## 📦 Project Structure
+
+**For Web:**
+
+- Firebase config is in `lib/main.dart` (hardcoded for development)- ✅ **Remember Me** - Optional credential persistence via SharedPreferences
+
+- For production: `flutterfire configure`
+
+- ✅ **Session Management** - Persistent login with last login tracking```
+
+#### 4. Install iOS Dependencies (if building for iOS)
+
+```bashlib/
+
+cd ios
+
+pod install --repo-update### File Management & Cloud Storage├── main.dart                    # App entry point
+
+cd ..
+
+```- ✅ **Upload PDFs** - Select files with file picker, show progress (0-100%)├── app/
+
+
+
+#### 5. Verify Setup- ✅ **Download PDFs** - Download from Firebase Storage to device│   ├── routes/app_pages.dart   # Navigation routes
+
+```bash
+
+flutter doctor- ✅ **Share PDFs** - Generate shareable download links via share_plus│   ├── themes/app_theme.dart   # Material Design 3
+
+```
+
+- ✅ **Delete PDFs** - Permanently remove files from cloud storage│   ├── services/               # Business logic
+
+### Run the App
+
+- ✅ **View Metadata** - Display file size (KB), creation date, page count│   │   ├── auth_service.dart
+
+**Web (Chrome):**
+
+```bash- ✅ **List Files** - Show all user's uploaded PDFs│   │   ├── pdf_service.dart
+
+flutter run -d chrome
+
+```- ✅ **File Search** - Find conversions by name or date│   │   ├── storage_service.dart
+
+
+
+**Android:**│   │   └── document_conversion_service.dart
+
+```bash
+
+flutter run -d android### PDF Conversion (Mobile Only)│   ├── modules/                # Feature modules
+
+```
+
+- ✅ **PDF to Word** - Extract text from PDF, save as RTF document with formatting│   │   ├── auth/               # Login, Register, Password Reset
+
+**iOS:**
+
+```bash- ✅ **Word to PDF** - Convert text documents to PDF with proper formatting│   │   ├── home/               # Dashboard, History, Profile
+
+flutter run -d ios
+
+```- ✅ **Progress Tracking** - Real-time upload/download progress UI with percentage│   │   ├── conversion/         # PDF Conversion
+
+
+
+**Test Guest Mode:**- ✅ **Conversion History** - Track all conversions in Firestore with timestamps│   │   └── splash/             # Splash Screen
+
+1. Open app
+
+2. Click "Continue as Guest" button- ✅ **Batch Operations** - Convert and upload multiple files│   └── data/                   # Models & Repositories
+
+3. Instant access without login ✅
+
+- ✅ **Error Handling** - User-friendly error messages and validation└── assets/                     # Images & Icons
+
+## 🔐 Firebase Setup
+
+
+
+### Enable Authentication
+
+1. Go to **Firebase Console** > **Authentication** > **Sign-in method**### User Interface & Experienceandroid/
+
+2. Enable:
+
+   - ✅ **Email/Password**- ✅ **Material Design 3** - Modern, responsive UI following latest design guidelines├── app/google-services.json    # Firebase config
+
+   - ✅ **Google** (add OAuth client ID)
+
+   - ✅ **Anonymous** (optional)- ✅ **Dark/Light Themes** - System theme detection (iOS/Android) + manual toggle└── build.gradle.kts
+
+
+
+### Enable Firestore- ✅ **Bottom Navigation** - Easy access to Home, History, and Profile tabs
+
+1. **Firebase Console** > **Firestore Database**
+
+2. Set rules:- ✅ **Loading Animations** - Smooth animations during file operationsios/
+
+```javascript
+
+rules_version = '2';- ✅ **Error Messages** - Clear, actionable error messages from Firebase└── Runner/GoogleService-Info.plist  # Firebase config
+
+service cloud.firestore {
+
+  match /databases/{database}/documents {- ✅ **Responsive Layout** - Works on phones, tablets, and web browsers```
+
+    match /users/{uid} {
+
+      allow read, write: if request.auth.uid == uid;
+
+    }
+
+    match /conversions/{document=**} {### Cross-Platform Support---
+
+      allow read, write: if request.auth != null;
+
+    }- ✅ **iOS** - Full feature support with native integration
+
+  }
+
+}- ✅ **Android** - Full feature support with native permissions## 🚀 Quick Start
+
+```
+
+- ✅ **Web** - Guest mode, authentication, UI (PDF conversion via mobile only)
+
+### Enable Cloud Storage
+
+1. **Firebase Console** > **Cloud Storage**- ✅ **macOS, Windows, Linux** - Base support (UI may require adjustments)### Prerequisites
+
+2. Set rules:
+
+```
+
+rules_version = '2';
+
+service firebase.storage {---```bash
+
+  match /b/{bucket}/o {
+
+    match /users/{uid}/{allPaths=**} {# Check Flutter installation
+
+      allow read, write: if request.auth.uid == uid;
+
+    }## 🛠️ Tech Stackflutter --version
+
+  }
+
+}
+
+```
+
+### Core Framework# Verify environment
+
+### Google OAuth Setup (Mobile)
+
+1. **Google Cloud Console** > **Credentials**| Component | Technology | Version | Purpose |flutter doctor
+
+2. Create OAuth 2.0 Client IDs:
+
+   - **iOS:** Bundle ID = `com.smartpdf.app`|-----------|-----------|---------|---------|```
+
+   - **Android:** Package name = `com.smartpdf.app`
+
+3. Get Android SHA-1:| **UI Framework** | Flutter | 3.1.0+ | Cross-platform UI development |
+
+   ```bash
+
+   keytool -list -v -keystore ~/.android/debug.keystore -alias androiddebugkey| **Programming Language** | Dart | >=3.1.0 <4.0.0 | Application logic |**Required:**
+
+   # Password: android
+
+   ```| **State Management** | GetX | 4.6.6 | Reactive state & routing |- Flutter SDK 3.1.0 or higher
+
+4. Add to **Firebase Console** > **Project Settings**
+
+- Xcode 14+ (for iOS)
+
+## 📱 Build & Deploy
+
+### Backend & Cloud Services- Android SDK 21+ (for Android)
+
+### Debug Build
+
+```bash| Component | Technology | Version | Purpose |- Firebase Project (https://console.firebase.google.com)
+
+# Android APK (debug)
+
+flutter build apk --debug|-----------|-----------|---------|---------|
+
+
+
+# iOS (debug)| **Authentication** | Firebase Auth | 6.1.1 | Email/password, user management |### Installation
+
+flutter build ios --debug
+
+```| **Cloud Storage** | Firebase Storage | 13.0.3 | File upload/download |
+
+
+
+### Release Build| **Database** | Cloud Firestore | 6.0.3 | User profiles, conversion history |#### 1. Clone Repository
+
+```bash
+
+# Android APK (release)| **OAuth** | Google Sign-In | 6.1.5 | Google authentication |```bash
+
+flutter build apk --release
+
+git clone https://github.com/yourusername/smartpdf.git
+
+# Android App Bundle (for Google Play)
+
+flutter build appbundle --release### Libraries & Packagescd smartpdf
+
+
+
+# iOS (release)| Category | Package | Version | Purpose |```
+
+flutter build ios --release
+
+```|----------|---------|---------|---------|
+
+
+
+### Web Deployment| **PDF Processing** | syncfusion_flutter_pdf | 31.2.4 | PDF text extraction, manipulation |#### 2. Install Dependencies
+
+```bash
+
+# Build for web| **File Handling** | file_picker | 10.3.3 | File selection (Android/iOS) |```bash
+
+flutter build web --release
+
+| **File Selection** | file_selector | 1.0.3 | File selection (Web/Desktop) |flutter pub get
+
+# Deploy to Firebase Hosting
+
+firebase deploy --only hosting| **System Paths** | path_provider | 2.1.1 | Temporary/document directories |```
+
+```
+
+| **Permissions** | permission_handler | 12.0.1 | Runtime permissions (Android/iOS) |
+
+## 🧪 Testing
+
+| **File Sharing** | share_plus | 7.2.1 | System share dialog |#### 3. Configure Firebase
+
+### Run Tests
+
+```bash| **Typography** | google_fonts | 6.1.0 | Custom fonts |
+
+flutter test
+
+```| **Icons** | flutter_svg | 2.0.9 | SVG vector graphics |**For Android:**
+
+
+
+### Manual Testing Checklist| **Loading** | loading_animation_widget | 1.2.0+4 | Loading animations |- Ensure `android/app/google-services.json` exists ✅ (already included)
+
+- [ ] Guest mode works
+
+- [ ] Email/Password login/register| **Localization** | intl | 0.20.2 | Internationalization |
+
+- [ ] Password reset email sent
+
+- [ ] Google Sign-In (mobile only)| **URL Launcher** | url_launcher | 6.2.1 | Open URLs |**For iOS:**
+
+- [ ] PDF upload with progress
+
+- [ ] PDF download succeeds| **Local Storage** | shared_preferences | 2.2.2 | Persistent key-value storage |- Ensure `ios/Runner/GoogleService-Info.plist` exists ✅ (already included)
+
+- [ ] PDF conversion (PDF↔Word)
+
+- [ ] Conversion history displays- Add to Xcode if needed:
+
+- [ ] Delete files and conversions
+
+- [ ] Share with download link---  ```bash
+
+- [ ] Edit user profile
+
+- [ ] Change password  open ios/Runner.xcworkspace
+
+- [ ] Delete account
+
+- [ ] Theme toggle (dark/light)## 📁 Project Structure  # Right-click Runner → Add Files → GoogleService-Info.plist
+
+
+
+## 🐛 Troubleshooting  ```
+
+
+
+### App won't start```
+
+```bash
+
+flutter cleansmartpdf/**For Web:**
+
+flutter pub get
+
+flutter run│- Firebase config is in `lib/main.dart` (hardcoded for development)
+
+```
 
 ├── lib/- For production: `flutterfire configure`
 
-│   ├── main.dart                           # 🎯 App entry point (Firebase init, GetMaterialApp)
+### Firebase connection errors
 
-│   │#### 4. Install iOS Dependencies (if building for iOS)
+- Verify `google-services.json` and `GoogleService-Info.plist` exist│   ├── main.dart                           # 🎯 App entry point (Firebase init, GetMaterialApp)
 
-│   └── app/```bash
+- Check Firebase Console project is active
 
-│       ├── routes/cd ios
+- Ensure API keys are not restricted│   │#### 4. Install iOS Dependencies (if building for iOS)
+
+
+
+### PDF conversion not working│   └── app/```bash
+
+- PDF conversion only works on **iOS/Android** (not Web)
+
+- Ensure storage permissions granted│       ├── routes/cd ios
+
+- Check device has sufficient disk space
 
 │       │   └── app_pages.dart              # 🗺️ Route definitions & bindingspod install --repo-update
 
-│       │cd ..
+### iOS build fails
 
-│       ├── themes/```
+```bash│       │cd ..
 
-│       │   └── app_theme.dart              # 🎨 Light/Dark theme definitions
+cd ios
 
-│       │#### 5. Verify Setup
+rm -rf Pods Podfile.lock│       ├── themes/```
+
+pod install --repo-update
+
+cd ..│       │   └── app_theme.dart              # 🎨 Light/Dark theme definitions
+
+flutter clean
+
+flutter pub get│       │#### 5. Verify Setup
+
+```
 
 │       ├── services/                       # 💼 Business logic services```bash
 
-│       │   ├── auth_service.dart           # 🔐 Firebase authenticationflutter doctor
+### Android build fails
 
-│       │   ├── pdf_service.dart            # 📄 PDF operations```
+- Verify Android SDK installed: `flutter doctor`│       │   ├── auth_service.dart           # 🔐 Firebase authenticationflutter doctor
 
-│       │   ├── storage_service.dart        # ☁️ Cloud storage operations
+- Set ANDROID_HOME: `export ANDROID_HOME=~/Android/Sdk`
 
-│       │   └── document_conversion_service.dart # 🔄 PDF ↔ Word conversion### Run the App
+- Run: `flutter clean && flutter pub get`│       │   ├── pdf_service.dart            # 📄 PDF operations```
 
-│       │
 
-│       ├── modules/                        # 📦 Feature modules (MVC)**Web (Chrome):**
 
-│       │   ├── auth/```bash
+## 📚 Documentation│       │   ├── storage_service.dart        # ☁️ Cloud storage operations
 
-│       │   │   ├── bindings/flutter run -d chrome
 
-│       │   │   │   └── auth_binding.dart   # Dependency injection```
+
+For detailed documentation, see:│       │   └── document_conversion_service.dart # 🔄 PDF ↔ Word conversion### Run the App
+
+- **[Complete Project Documentation](docs/Complete_Documentation.md)** - Full guide with architecture, setup, features
+
+- **[HTML Version](docs/Complete_Documentation.html)** - Print-friendly documentation│       │
+
+
+
+## 🤝 Contributing│       ├── modules/                        # 📦 Feature modules (MVC)**Web (Chrome):**
+
+
+
+Contributions are welcome! Please:│       │   ├── auth/```bash
+
+1. Fork the repository
+
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)│       │   │   ├── bindings/flutter run -d chrome
+
+3. Commit changes (`git commit -m 'Add amazing feature'`)
+
+4. Push to branch (`git push origin feature/amazing-feature`)│       │   │   │   └── auth_binding.dart   # Dependency injection```
+
+5. Open Pull Request
 
 │       │   │   ├── controllers/
+
+## 📄 License
 
 │       │   │   │   └── auth_controller.dart # Authentication logic**Android:**
 
+This project is licensed under the MIT License - see [LICENSE](LICENSE) file for details.
+
 │       │   │   └── views/```bash
+
+## 👨‍💻 Author
 
 │       │   │       ├── login_view.dartflutter run -d android
 
+**Hamza Munir**
+
 │       │   │       ├── register_view.dart```
+
+---
 
 │       │   │       └── forgot_password_view.dart
 
+## 🙏 Acknowledgments
+
 │       │   │**iOS:**
 
-│       │   ├── home/```bash
+- [Flutter](https://flutter.dev/) - UI framework
 
-│       │   │   ├── bindings/flutter run -d ios
+- [Firebase](https://firebase.google.com/) - Backend services│       │   ├── home/```bash
+
+- [GetX](https://pub.dev/packages/get) - State management
+
+- [Syncfusion](https://www.syncfusion.com/) - PDF processing│       │   │   ├── bindings/flutter run -d ios
+
+- [Material Design 3](https://m3.material.io/) - Design system
 
 │       │   │   │   └── home_binding.dart```
 
+## 📞 Support
+
 │       │   │   ├── controllers/
 
-│       │   │   │   └── home_controller.dart # Dashboard logic**Test Guest Mode:**
+For help and questions:
 
-│       │   │   └── views/1. Open app
+1. Check [Complete Documentation](docs/Complete_Documentation.md)│       │   │   │   └── home_controller.dart # Dashboard logic**Test Guest Mode:**
+
+2. Review [Troubleshooting Section](#troubleshooting)
+
+3. Check Flutter logs: `flutter logs`│       │   │   └── views/1. Open app
+
+4. Open GitHub Issue
 
 │       │   │       ├── home_view.dart       # Main dashboard2. Click "Continue as Guest" button
 
+---
+
 │       │   │       └── tabs/3. Instant access without login ✅
 
-│       │   │           ├── dashboard_tab.dart
+**Last Updated:** November 12, 2025  
+
+**Version:** 1.0.0+1  │       │   │           ├── dashboard_tab.dart
+
+**Status:** ✅ Production Ready
 
 │       │   │           ├── history_tab.dart---
 
