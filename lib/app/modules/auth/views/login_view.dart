@@ -142,8 +142,8 @@ class LoginView extends GetView<AuthController> {
                 const SizedBox(height: 12),
                 OutlinedButton.icon(
                   onPressed: () {
-                    controller.error.value = ''; // Clear any previous errors
-                    controller.signInAnonymously();
+                    controller.error.value = '';
+                    controller.signInAsGuest();
                   },
                   icon: const Icon(Icons.person_outline),
                   label: const Text('Continue as Guest'),

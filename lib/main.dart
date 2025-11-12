@@ -16,7 +16,7 @@ void main() async {
           messagingSenderId: '195471786367',
           projectId: 'smartpdf-beb9d',
           authDomain: 'smartpdf-beb9d.firebaseapp.com',
-          storageBucket: 'smartpdf-beb9d.firebasestorage.app',
+          storageBucket: 'smartpdf-beb9d.appspot.com',
         ),
       );
     } else {

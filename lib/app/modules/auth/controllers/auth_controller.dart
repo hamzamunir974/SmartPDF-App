@@ -9,15 +9,14 @@ class AuthController extends GetxController {
   final FirebaseAuth _auth = FirebaseAuth.instance;
   final GoogleSignIn _googleSignIn = GoogleSignIn();
   final UserRepository _userRepository = UserRepository();
-  
   final RxBool isLoading = false.obs;
   final RxString error = ''.obs;
   final RxBool isEmailVerified = false.obs;
   final RxBool rememberMe = false.obs;
   final Rx<UserProfile?> userProfile = Rx<UserProfile?>(null);
-  
   Rx<User?> user = Rx<User?>(null);
   SharedPreferences? _prefs;
+  final RxBool isGuest = false.obs;
 
   @override
   void onInit() async {
@@ -68,28 +67,21 @@ class AuthController extends GetxController {
     try {
       isLoading.value = true;
       error.value = '';
-      
       // Validate email format
       if (!GetUtils.isEmail(email)) {
         error.value = 'Please enter a valid email address';
         return;
       }
-      
       final userCredential = await _auth.signInWithEmailAndPassword(
         email: email,
         password: password,
       );
-      
       if (!userCredential.user!.emailVerified) {
         error.value = 'Please verify your email before signing in';
         await signOut();
         return;
       }
-
-      // Update last login
       await _userRepository.updateLastLogin(userCredential.user!.uid);
-      
-      // Save remember me preference
       if (_prefs != null) {
         if (rememberMe.value) {
           await _prefs!.setBool('rememberMe', true);
@@ -99,12 +91,11 @@ class AuthController extends GetxController {
           await _prefs!.remove('lastEmail');
         }
       }
-      
       Get.offAllNamed('/home');
     } on FirebaseAuthException catch (e) {
-      error.value = _getMessageFromErrorCode(e.code);
+      error.value = e.message ?? _getMessageFromErrorCode(e.code);
     } catch (e) {
-      error.value = 'An unexpected error occurred';
+      error.value = e.toString();
     } finally {
       isLoading.value = false;
     }
@@ -114,25 +105,20 @@ class AuthController extends GetxController {
     try {
       isLoading.value = true;
       error.value = '';
-      
       // Validate email format
       if (!GetUtils.isEmail(email)) {
         error.value = 'Please enter a valid email address';
         return;
       }
-      
       // Validate password strength
       if (!_isPasswordStrong(password)) {
         error.value = 'Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one number, and one special character';
         return;
       }
-      
       final userCredential = await _auth.createUserWithEmailAndPassword(
         email: email,
         password: password,
       );
-      
-      // Create user profile
       final profile = UserProfile(
         uid: userCredential.user!.uid,
         email: email,
@@ -141,26 +127,20 @@ class AuthController extends GetxController {
         createdAt: DateTime.now(),
         lastLoginAt: DateTime.now(),
       );
-      
       await _userRepository.createProfile(profile);
-      
-      // Send email verification
       await userCredential.user!.sendEmailVerification();
-      
       Get.snackbar(
         'Verification Required',
         'Please check your email to verify your account',
         snackPosition: SnackPosition.BOTTOM,
         duration: const Duration(seconds: 5),
       );
-      
-      // Sign out until email is verified
       await signOut();
       Get.offAllNamed('/login');
     } on FirebaseAuthException catch (e) {
-      error.value = _getMessageFromErrorCode(e.code);
+      error.value = e.message ?? _getMessageFromErrorCode(e.code);
     } catch (e) {
-      error.value = 'An unexpected error occurred';
+      error.value = e.toString();
     } finally {
       isLoading.value = false;
     }
@@ -206,58 +186,24 @@ class AuthController extends GetxController {
     }
   }
   
-  Future<void> signInAnonymously() async {
-    try {
-      isLoading.value = true;
-      error.value = '';
-      
-      // Sign in anonymously with Firebase
-      final userCredential = await _auth.signInAnonymously();
-      final User? anonymousUser = userCredential.user;
-      
-      if (anonymousUser == null) {
-        error.value = 'Failed to sign in as guest';
-        return;
-      }
-      
-      // Create guest profile
-      final profile = UserProfile(
-        uid: anonymousUser.uid,
-        provider: AuthProvider.anonymous,
-        displayName: 'Guest User',
-        isEmailVerified: false,
-        rememberMe: false,
-        createdAt: DateTime.now(),
-        lastLoginAt: DateTime.now(),
-      );
-      
-      try {
-        await _userRepository.createProfile(profile);
-        userProfile.value = profile;
-        user.value = anonymousUser;
-        
-        // Navigate to home page with error handling
-        print('Attempting to navigate to home page...'); // Debug log
-        try {
-          await Get.offAllNamed('/home');
-          print('Navigation successful'); // Debug log
-        } catch (error) {
-          print('Navigation error: $error'); // Debug log
-          throw Exception('Failed to navigate to home page: $error');
-        }
-      } catch (e) {
-        // If profile creation fails, delete the anonymous user
-        await anonymousUser.delete();
-        error.value = 'Failed to create guest profile';
-      }
-    } on FirebaseAuthException catch (e) {
-      error.value = _getMessageFromErrorCode(e.code);
-    } catch (e) {
-      error.value = 'Error signing in as guest';
-      print('Guest sign-in error: $e'); // For debugging
-    } finally {
+  // True guest mode: no Firebase, just local session
+  void signInAsGuest() {
+    isLoading.value = true;
+    error.value = '';
+    isGuest.value = true;
+    userProfile.value = UserProfile(
+      uid: 'guest',
+      provider: AuthProvider.anonymous,
+      displayName: 'Guest User',
+      isEmailVerified: false,
+      rememberMe: false,
+      createdAt: DateTime.now(),
+      lastLoginAt: DateTime.now(),
+    );
+    Future.delayed(const Duration(milliseconds: 500), () {
       isLoading.value = false;
-    }
+      Get.offAllNamed('/home');
+    });
   }
   
   Future<void> resetPassword(String email) async {
